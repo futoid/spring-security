@@ -14,6 +14,7 @@ public class Customer {
     private long id;
     private String email;
     private String pwd;
+    @Column(name = "role")
     private String role;
 
 }
