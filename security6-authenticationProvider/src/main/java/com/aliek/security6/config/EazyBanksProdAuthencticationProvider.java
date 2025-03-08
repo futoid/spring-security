@@ -1,6 +1,7 @@
 package com.aliek.security6.config;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -13,8 +14,9 @@ import org.springframework.stereotype.Component;
 
 
 @Component
+@Profile("prod")
 @RequiredArgsConstructor
-public class EazyBanksAuthencticationProvider implements AuthenticationProvider {
+public class EazyBanksProdAuthencticationProvider implements AuthenticationProvider {
 
     private final UserDetailsService userDetailsService;
     private final PasswordEncoder passwordEncoder;
